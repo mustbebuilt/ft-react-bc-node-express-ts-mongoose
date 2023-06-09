@@ -31,10 +31,10 @@ res.status(500).json({ error: "Internal Server Error" });
 });
 
 // GET /api/filmName/:filmName
-router.get("/api/filmName/:filmName", async (req: Request, res: Response) => {
+router.get("/api/filmTitle/:filmTitle", async (req: Request, res: Response) => {
     try {
-      const filmName = req.params.filmName;
-      const data = await dataController.getDataByName(filmName);
+      const filmTitle = req.params.filmTitle;
+      const data = await dataController.getDataByFilmTitle(filmTitle);
       res.json(data);
     } catch (err) {
       console.error(err);

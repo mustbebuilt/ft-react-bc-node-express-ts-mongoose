@@ -21,10 +21,10 @@ return { error: "Failed to retrieve data" };
 }
 }
 
-async function getDataByName(filmName: string): Promise<IFilm[] | { error: string }> {
+async function getDataByFilmTitle(filmTitle: string): Promise<IFilm[] | { error: string }> {
     try {
-        const regex = new RegExp(filmName, "i"); // Create a case-insensitive regular expression
-        const films: IFilm[] = await Film.find({ filmName: regex });
+        const regex = new RegExp(filmTitle, "i"); // Create a case-insensitive regular expression
+        const films: IFilm[] = await Film.find({ filmTitle: regex });
         return films;
       } catch (error) {
         console.error("Error retrieving data:", error);
@@ -99,7 +99,7 @@ return { error: "Failed to delete data" };
 export {
 getAllData,
 getDataById,
-getDataByName,
+getDataByFilmTitle,
 getDataByCertificate,
 getDataByDateRange,
 createData,

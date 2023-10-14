@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.myApp {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.filmApp {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+}
+
+.filmListItem {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+.sml {
+    font-size: 0.8rem;
+}

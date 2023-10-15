@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function ItemList({ items, onFilmSelect }) {
+const ItemList = ({ items, onFilmSelect }) => {
   return (
     <div className="filmList">
       {items.map(item => (

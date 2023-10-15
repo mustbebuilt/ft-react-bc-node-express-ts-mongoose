@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function ItemDetails({ selectedFilmId }) {
+const ItemDetails= ({ selectedFilmId }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
